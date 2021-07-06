@@ -14,5 +14,6 @@ services:
 
 volumes:
   jenkins-log:
+    external: true
   jenkins-data:
-
+    external: true
