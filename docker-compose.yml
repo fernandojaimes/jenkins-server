@@ -4,6 +4,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    image: jenkins-server:v1
     container_name: jenkins-master
     ports:
       - "8080:8080"

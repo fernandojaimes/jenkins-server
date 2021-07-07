@@ -1,6 +1,9 @@
 FROM jenkins/jenkins:2.289.2-lts-jdk11
 LABEL maintainer="ffernandojaimes@gmail.com"
 
+COPY plugins.txt /usr/share/jenkins/plugins.txt
+RUN /usr/local/bin/install-plugins.sh < /usr/share/jenkins/plugins.txt
+
 USER root
 RUN mkdir /var/log/jenkins
 RUN mkdir /var/cache/jenkins
